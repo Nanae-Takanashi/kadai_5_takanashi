@@ -145,6 +145,7 @@
 
             <div class="scroll">
                 <img src="./images/pc_gallary_05-100.jpg" alt="atomospher_daytime">
+                <img src="./images/pc_gallary_05-100.jpg" alt="atomospher_daytime">
                 <img src="./images/pc_gallary_04-100.jpg" alt="coffee_beans">
                 <img src="./images/pc_gallary_03-100.jpg" alt="atomospher_dark">
                 <img src="./images/pc_gallary_02-100.jpg" alt="shop_sign">
@@ -218,11 +219,30 @@
 
         $(function(){
             $(".slider").slick({
-                // autoplay: true,
-                // autoplaySpeed: 2000,
+                autoplay: true,
+                autoplaySpeed: 2000,
                 arrows: false,
                 dots: true
             });
+        })
+
+        $(function(){
+            $(".scroll").slick({
+                autoplay: true,
+                arrows: false,
+                infinite: true, 
+                autoplaySpeen: 2000,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            })
         })
     </script>
 
